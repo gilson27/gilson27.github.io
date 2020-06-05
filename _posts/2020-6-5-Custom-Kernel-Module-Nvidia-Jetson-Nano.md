@@ -32,11 +32,11 @@ To customise kernel we need to download kernel source code.
 3. cd to kernel source folder, which is kernel_4.9 in my case.
 4. Add your custom module’s source code in the respective directory along with KConfig and MakeFile changes.
 5. Add the module to tegra_defconfig which is present in *arch/arm64/configs* as a static or loadable module. You may do makeconfig also.
-6. To compile kernel we need to setup environment variables: **TEGRA_KERNEL_OUT=<Where should the output go>**
+6. To compile kernel we need to setup environment variables: TEGRA_KERNEL_OUT=&lt;Where should the output go&gt;
 7. Install cross compiler. I used *linaro*. To install you just need to untar source into a directory, which we will use in the next step.
 8. Run 
-        export CROSS_COMPILE=<cross_prefix>
-If cross compiler is linaro, path will be <linaro_install_path>/bin/aarch64-linux-gnu-
+        export CROSS_COMPILE=&lt;cross_prefix&gt;
+If cross compiler is linaro, path will be &lt;linaro_install_path&gt;/bin/aarch64-linux-gnu-
 9. Run export **LOCALVERSION=-tegra**
 10. To configure linux with tegradef_config, run 
         make ARCH=arm64 O=$TEGRA_KERNEL_OUT tegra_defconfig
