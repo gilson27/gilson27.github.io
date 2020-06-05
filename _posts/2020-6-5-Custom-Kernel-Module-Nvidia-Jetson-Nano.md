@@ -44,11 +44,11 @@ To customise kernel we need to download kernel source code.
 
 ## Flashing Image
 
-1. To flash the image to jetson nano devkit run: sudo ./flash.sh jetson-nano-qspi-sd mmcblk0p1
+1. To flash the image to jetson nano devkit run: **sudo ./flash.sh jetson-nano-qspi-sd mmcblk0p1**
 Flashing will take more around 15 minutes.
 2. Once flashed board will bootup and ask for user configuration like timezone, keyboard layout, username and password.
 3. Provide the details and the configuration daemon will apply the configurations and reboot you to Ubuntu home.
 
 ![NVIDIA_Jetson_Nano_Ubuntu_Home_Screen]({{ site.baseurl }}/images/Jetson_Nano-Getting_Started-Setup_Welcome_Screen.png)
 
-Check if installed module is present using lsmod and dmesg.
+Check if installed module is present using **lsmod** and **dmesg**.
