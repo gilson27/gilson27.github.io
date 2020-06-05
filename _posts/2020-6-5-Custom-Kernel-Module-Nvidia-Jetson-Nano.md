@@ -39,9 +39,9 @@ To customise kernel we need to download kernel source code.
 If cross compiler is linaro, path will be &lt;linaro_install_path&gt;/bin/aarch64-linux-gnu-
 9. Run export **LOCALVERSION=-tegra**
 10. To configure linux with tegradef_config, run 
-        make ARCH=arm64 O=$TEGRA_KERNEL_OUT tegra_defconfig
+        **make ARCH=arm64 O=&#36;TEGRA_KERNEL_OUT tegra_defconfig**
 11. Build the kernel using
-        make ARCH=arm64 O=$TEGRA_KERNEL_OUT -j3
+        make ARCH=arm64 O=	&#36;TEGRA_KERNEL_OUT -j3
 12. Replace *Linux_for_Tegra/kernel/Image* with *$TEGRA_KERNEL_OUT/arch/arm64/boot/Image*
 13. If you have any dts change, replace the contents of *Linux_for_Tegra/kernel/dtb* with *$TEGRA_KERNEL_OUT/arch/arm64/boot/dts/*
 14. If you have built a dynamic module you shall add it to rootfs using: 
