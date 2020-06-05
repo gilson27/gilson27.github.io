@@ -36,11 +36,12 @@ To customise kernel we need to download kernel source code.
 7. Install cross compiler. I used *linaro*. To install you just need to untar source into a directory, which we will use in the next step.
 8. Run **export CROSS_COMPILE=<cross_prefix>**. If cross compiler is linaro, path will be <linaro_install_path>/bin/aarch64-linux-gnu-
 9. Run export **LOCALVERSION=-tegra**
-10. To configure linux with tegradef_config, run **make ARCH=arm64 O=$TEGRA_KERNEL_OUT tegra_defconfig**
+10. To configure linux with tegradef_config, run 
+> make ARCH=arm64 O=$TEGRA_KERNEL_OUT tegra_defconfig
 11. Build the kernel using: **make ARCH=arm64 O=$TEGRA_KERNEL_OUT -j3**
 12. Replace *Linux_for_Tegra/kernel/Image* with *$TEGRA_KERNEL_OUT/arch/arm64/boot/Image*
 13. If you have any dts change, replace the contents of *Linux_for_Tegra/kernel/dtb* with *$TEGRA_KERNEL_OUT/arch/arm64/boot/dts/*
-14. If you have built a dynamic module you shall add it to rootfs using: **sudo make ARCH=arm64 O=$TEGRA_KERNEL_OUT modules_install INSTALL_MOD_PATH=<top>/Linux_for_Tegra/rootfs/**
+14. If you have built a dynamic module you shall add it to rootfs using: **_sudo make ARCH=arm64 O=$TEGRA_KERNEL_OUT modules_install INSTALL_MOD_PATH=Path/Linux_for_Tegra/rootfs/_**
 
 ## Flashing Image
 
